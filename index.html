@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaliya Book Publication | Professional Handwriting Jobs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        .glass-morphism { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .gradient-text { background: linear-gradient(90deg, #1e40af, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Smooth Scroll Container */
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 20px;
+            padding: 20px;
+            cursor: grab;
+            scrollbar-width: none;
+        }
+        .scroll-container::-webkit-scrollbar { display: none; }
+        
+        .scrolling-wrapper {
+            display: flex;
+            animation: scroll 45s linear infinite;
+        }
+        .scrolling-wrapper:hover { animation-play-state: paused; }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .feedback-card {
+            min-width: 320px;
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-right: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* FAQ Transition */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .faq-item.active .faq-content {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+        .faq-item.active { border-color: #3b82f6; background-color: #f0f7ff; }
+        .faq-item.active i { transform: rotate(180deg); color: #1e40af; }
+
+        /* New Form Styles Integration */
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: #4b5a76;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+        .form-input-custom {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #dfe3ea;
+            border-radius: 14px;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
+            background: #f9fbff;
+        }
+        .form-input-custom:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+        .thankyou-section {
+            text-align: center;
+            padding: 40px 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-normal">
+
+    <a href="https://wa.me/919983251041" target="_blank" class="fixed bottom-6 right-6 z-[100] bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <nav class="glass-morphism sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://i.ibb.co/60WJVcFG/IMG-20260115-WA0001.jpg" alt="Aaliya Logo" class="h-10 w-10 object-contain rounded-full">
+                <span class="text-xl font-extrabold text-blue-900 tracking-tight">AALIYA <span class="text-blue-600 font-light">PUBLICATION</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold text-xs uppercase tracking-widest text-slate-600">
+                <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                <a href="#plans" class="hover:text-blue-600 transition">Plans</a>
+                <a href="#register" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-24 pb-16 px-6 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Govt. Registered Organization</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">Earn from Home with Your <br><span class="gradient-text">Beautiful Handwriting</span></h1>
+            <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto font-light">Professional novel writing projects available for everyone. Work at your own pace and get paid directly to your bank account.</p>
+            
+            <div class="bg-yellow-400 p-5 rounded-2xl inline-flex flex-col md:flex-row items-center gap-4 shadow-lg">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle text-2xl"></i>
+                    <span class="font-bold text-lg">Instant 50% Advance Salary</span>
+                </div>
+                <div class="hidden md:block w-px h-8 bg-black/20"></div>
+                <p class="font-medium text-sm">Receive your first payment within 5 minutes of joining!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" class="py-24 bg-slate-50 px-6">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 uppercase tracking-tight">Available Writing Projects</h2>
+            <div class="h-1 w-20 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-xl transition-all flex flex-col h-full">
+                <p class="text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">07 Days Project</p>
+                <div class="text-4xl font-bold text-slate-900 mb-6">₹13,500</div>
+                <ul class="space-y-4 text-sm text-slate-600 mb-8 flex-grow">
+                    <li><i class="fas fa-file-alt mr-2 text-blue-500"></i> Write 100 Pages</li>
+                    <li><i class="fas fa-pencil-alt mr-2 text-blue-500"></i> 14 Pages Per Day</li>
+                    <li class="font-semibold text-red-500">Registration Fee: ₹750</li>
+                </ul>
+                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter mb-4 text-center bg-blue-50 py-1 rounded">All Languages Project Available</div>
+                <a href="#register" class="block text-center py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-blue-600 transition">Apply Now</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-xl transition-all border-t-4 border-t-blue-500 flex flex-col h-full">
+                <p class="text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">10 Days Project</p>
+                <div class="text-4xl font-bold text-slate-900 mb-6">₹18,000</div>
+                <ul class="space-y-4 text-sm text-slate-600 mb-8 flex-grow">
+                    <li><i class="fas fa-file-alt mr-2 text-blue-500"></i> Write 160 Pages</li>
+                    <li><i class="fas fa-pencil-alt mr-2 text-blue-500"></i> 16 Pages Per Day</li>
+                    <li class="font-semibold text-red-500">Registration Fee: ₹950</li>
+                </ul>
+                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter mb-4 text-center bg-blue-50 py-1 rounded">All Languages Project Available</div>
+                <a href="#register" class="block text-center py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-blue-600 transition">Apply Now</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-xl transition-all flex flex-col h-full">
+                <p class="text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">12 Days Project</p>
+                <div class="text-4xl font-bold text-slate-900 mb-6">₹22,000</div>
+                <ul class="space-y-4 text-sm text-slate-600 mb-8 flex-grow">
+                    <li><i class="fas fa-file-alt mr-2 text-blue-500"></i> Write 200 Pages</li>
+                    <li><i class="fas fa-pencil-alt mr-2 text-blue-500"></i> 17 Pages Per Day</li>
+                    <li class="font-semibold text-red-500">Registration Fee: ₹1,150</li>
+                </ul>
+                <div class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter mb-4 text-center bg-blue-50 py-1 rounded">All Languages Project Available</div>
+                <a href="#register" class="block text-center py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-blue-600 transition">Apply Now</a>
+            </div>
+
+            <div class="bg-blue-900 p-8 rounded-3xl shadow-2xl transform scale-105 flex flex-col h-full text-white">
+                <span class="bg-yellow-400 text-black text-[10px] font-bold px-2 py-1 rounded w-fit mb-4">MOST POPULAR</span>
+                <p class="text-xs font-bold opacity-60 mb-2 uppercase tracking-widest">15 Days Project</p>
+                <div class="text-4xl font-bold mb-6 italic text-yellow-400">₹30,000</div>
+                <ul class="space-y-4 text-sm opacity-90 mb-8 flex-grow">
+                    <li><i class="fas fa-file-alt mr-2"></i> Write 300 Pages</li>
+                    <li><i class="fas fa-pencil-alt mr-2"></i> 20 Pages Per Day</li>
+                    <li class="font-bold text-lg underline decoration-yellow-400">Fee: ₹1,499</li>
+                </ul>
+                <div class="text-[10px] font-bold text-yellow-400 uppercase tracking-tighter mb-4 text-center bg-white/10 py-1 rounded">All Languages Project Available</div>
+                <a href="#register" class="block text-center py-3 bg-yellow-400 text-black rounded-xl font-bold text-sm hover:bg-white transition">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-tight">Common Questions</h2>
+            <div class="space-y-4">
+                <div class="faq-item border border-slate-200 rounded-2xl transition-all cursor-pointer" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center p-6">
+                        <h4 class="font-semibold text-slate-800">When will I get my 50% advance salary?</h4>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-6 text-sm text-slate-600 leading-relaxed">
+                        <p>After your registration and fee verification, the 50% advance salary will be credited to your bank account or UPI ID within 5 to 10 minutes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl transition-all cursor-pointer" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center p-6">
+                        <h4 class="font-semibold text-slate-800">How do I complete the registration?</h4>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-6 text-sm text-slate-600 leading-relaxed">
+                        <p>Fill out the application form below, scan the QR code to pay the project fee, and send the payment screenshot to us on WhatsApp +91 9983251041.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl transition-all cursor-pointer" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center p-6">
+                        <h4 class="font-semibold text-slate-800">How do I receive the project materials?</h4>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-6 text-sm text-slate-600 leading-relaxed">
+                        <p>The writing parcel (A4 sheets and book content) will be sent to your registered address via DTDC or BlueDart courier within 24 hours of registration.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl transition-all cursor-pointer" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center p-6">
+                        <h4 class="font-semibold text-slate-800">When and how will I get the remaining 50% salary?</h4>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-6 text-sm text-slate-600 leading-relaxed">
+                        <p>The final payment is released instantly once you finish the work and share the photos of the completed pages for final verification.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl transition-all cursor-pointer" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center p-6">
+                        <h4 class="font-semibold text-slate-800">Who will collect the completed work?</h4>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </div>
+                    <div class="faq-content px-6 text-sm text-slate-600 leading-relaxed">
+                        <p>Our courier executive will visit your home at the end of the project duration to pick up the written sheets. There are no extra charges for pickup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12">
+            
+            <div class="flex-1 bg-white p-10 rounded-3xl shadow-lg border border-slate-200" id="formCard">
+                <div class="header text-center mb-8">
+                    <h1 class="text-2xl font-bold text-bl
+                    <p class="text-slate-500">Registration Form</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" class="form-input-custom" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>WhatsApp</label>
+                        <input type="text" id="whatsapp" class="form-input-custom" placeholder="Enter WhatsApp number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" id="city" class="form-input-custom" placeholder="Enter city">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pin Code</label>
+                        <input type="text" id="pincode" class="form-input-custom" placeholder="Enter pin code">
+                    </div>
+
+                    <button class="w-full py-4 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition uppercase tracking-widest text-sm" onclick="submitForm()">Submit</button>
+                    <div class="text-center mt-3 text-red-500 text-sm font-semibold" id="message"></div>
+                </div>
+            </div>
+
+            <div class="flex-1 bg-white p-10 rounded-3xl shadow-lg border border-slate-200 thankyou-section" id="thankyouCard">
+                <div class="flex flex-col items-center justify-center h-full">
+                    <i class="fas fa-check-circle text-6xl text-green-500 mb-4"></i>
+                    <h2 class="text-3xl font-bold text-blue-900 mb-2">Thank You!</h2>
+                    <p class="text-slate-600 text-lg">Your information has been submitted successfully.</p>
+                    <p class="mt-4 font-bold text-blue-600">Aliya Book Publication</p>
+                    <button onclick="location.reload()" class="mt-8 text-blue-500 underline text-sm">Submit another response</button>
+                </div>
+            </div>
+
+            <div class="flex-1 bg-slate-900 rounded-3xl p-10 text-white text-center flex flex-col justify-center">
+                <h3 class="text-xl font-semibold mb-2">Registration Fee QR Code</h3>
+                <p class="text-slate-400 text-sm mb-8">Scan and pay the plan fee, then share the screenshot on WhatsApp.</p>
+                <div class="bg-white p-3 rounded-2xl inline-block mx-auto mb-6">
+                    <img src="https://i.ibb.co/8LSPCwX4/IMG-20260115-125817.jpg" class="w-44 h-44 object-contain" alt="Payment QR">
+                </div>
+                <div class="flex justify-center gap-6 opacity-60">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo-vector.svg" class="h-5 filter brightness-200">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Paytm_Logo_%28standalone%29.svg" class="h-5 filter brightness-200">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-3xl font-bold uppercase tracking-tighter">User Testimonials</h2>
+                <p class="text-slate-500 text-sm">Real stories from our successful South Indian writers</p>
+            </div>
+        </div>
+        <div class="scroll-container" id="feedback-container">
+            <div class="scrolling-wrapper">
+                <div class="feedback-card">
+                    <div class="text-yellow-400 text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-600 text-sm italic mb-4 whitespace-normal">"Received ₹7500 advance within 10 minutes. Very professional work from Chennai."</p>
+                    <p class="font-bold text-slate-900 text-sm">Karthik Raja</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-bold">Chennai, Tamil Nadu</p>
+                </div>
+                <div class="feedback-card">
+                    <div class="text-yellow-400 text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-600 text-sm italic mb-4 whitespace-normal">"The 15-day project is so easy. I earned 30k while staying with my kids."</p>
+                    <p class="font-bold text-slate-900 text-sm">Lakshmi Narayan</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-bold">Bengaluru, KA</p>
+                </div>
+                <div class="feedback-card">
+                    <div class="text-yellow-400 text-xs mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-slate-600 text-sm italic mb-4 whitespace-normal">"Genuine company. Parcel delivery was very fast in Hyderabad."</p>
+                    <p class="font-bold text-slate-900 text-sm">Venkatesh Rao</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-bold">Hyderabad, TS</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-slate-800 pb-16">
+            <div class="col-span-2">
+                <img src="https://i.ibb.co/60WJVcFG/IMG-20260115-WA0001.jpg" class="h-12 w-12 rounded-full mb-6">
+                <h4 class="text-white text-xl font-bold mb-4 uppercase tracking-tighter">Aaliya Book Publication</h4>
+                <p class="text-sm max-w-sm italic">"Providing genuine handwriting opportunities across India with transparent payment systems."</p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-6 text-xs uppercase tracking-[0.2em]">Quick Contacts</h5>
+                <ul class="space-y-4 text-xs font-semibold">
+                    <li><i class="fab fa-whatsapp mr-2 text-green-500"></i> +91 9983251041</li>
+                    <li><i class="fas fa-envelope mr-2"></i> support@ABPublication.com</li>
+                    <li><i class="fas fa-map-marker-alt mr-2"></i> 705, Block C, Delhi – 110092</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-6 text-xs uppercase tracking-[0.2em]">Join Community</h5>
+                <div class="flex gap-4">
+                    <a href="https://t.me/HandwritingJobIndia" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-telegram-plane text-white text-sm"></i></a>
+                    <a href="https://wa.me/919983251041" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-whatsapp text-white text-sm"></i></a>
+                    <a href="https://www.instagram.com/writing_projects_work_india" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fab fa-instagram text-white text-sm"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-10 text-[10px] font-bold uppercase tracking-[0.5em]">&copy; 2026 AALIYA PUBLICATION. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== element) item.classList.remove('active');
+            });
+            element.classList.toggle('active');
+        }
+
+        // Horizontal Drag for Feedback
+        const slider = document.querySelector('.scroll-container');
+        let isDown = false; let startX; let scrollLeft;
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            document.querySelector('.scrolling-wrapper').style.animationPlayState = 'paused';
+        });
+        slider.addEventListener('mouseleave', () => { isDown = false; });
+        slider.addEventListener('mouseup', () => { isDown = false; });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // FORM SUBMISSION LOGIC
+        async function submitForm() {
+            const name = document.getElementById("name").value.trim();
+            const whatsapp = document.getElementById("whatsapp").value.trim();
+            const city = document.getElementById("city").value.trim();
+            const pincode = document.getElementById("pincode").value.trim();
+
+            if (!name || !whatsapp || !city || !pincode) {
+                document.getElementById("message").innerText = "Please fill all fields.";
+                return;
+            }
+
+            const data = {
+                "NAME": name,
+                "WHATSAPP": whatsapp,
+                "CITY": city,
+                "PIN CODE": pincode
+            };
+
+            const url = "https://script.google.com/macros/s/AKfycbw7nqgC9w0DJ67V3ZiGX1cr1mArodipVULgWM7Lbs-KiG8KK5gD2ygNlrebhqxTMdJO/exec";
+            
+            document.getElementById("message").innerText = "Submitting...";
+
+            try {
+                // Using no-cors because Apps Script often triggers CORS issues on redirect
+                await fetch(url, {
+                    method: "POST",
+                    mode: "no-cors", 
+                    body: JSON.stringify(data),
+                    headers: { "Content-Type": "application/json" }
+                });
+
+                // Since "no-cors" doesn't return result, we assume success if no error is thrown
+                document.getElementById("formCard").style.display = "none";
+                document.getElementById("thankyouCard").style.display = "block";
+                
+                // Optional: scroll to the thank you card
+                document.getElementById("thankyouCard").scrollIntoView({ behavior: 'smooth' });
+
+            } catch (error) {
+                document.getElementById("message").innerText = "Network error! Please try again.";
+                console.error("Error:", error);
+            }
+        }
+    </script>
+</body>
+</html>
