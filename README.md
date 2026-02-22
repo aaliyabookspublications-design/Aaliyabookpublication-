@@ -3,7 +3,7 @@
 Official website for Aaliya Book Publication providing handwriting-based writing projects.
 
 ## Website
-https://handwritingjob.space
+https://Aaliyabookpublication.com
 
 ## About
 This platform offers project-based handwriting writing opportunities.  
@@ -15,7 +15,7 @@ It is not an employment or government job.
 - Registration fees are non-refundable once project materials are shared  
 
 ## Contact
-WhatsApp: +91 9983251041  
+WhatsApp: +91 6378507932  
 Email: support@ABPublication.com
 
 ## Disclaimer
