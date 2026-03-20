@@ -1,90 +1,60 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title for Google & browser tab -->
     <title>Handwriting Jobs from Home | Aaliya Book Publication</title>
+
+    <!-- Meta Description for Google search -->
+    <meta name="description" content="Earn ₹13,500–₹30,000 per month from home with professional handwriting projects by Aaliya Book Publication. Govt. registered. Work at your own pace and get paid instantly. Apply now!">
+
+    <!-- Optional: Keywords (not critical but can help) -->
+    <meta name="keywords" content="handwriting jobs, work from home, online handwriting work, Aaliya Book Publication, home-based jobs, South India, Tamil Nadu, Kerala, Karnataka">
+
+    <!-- Open Graph / Social Tags for link previews -->
+    <meta property="og:title" content="Handwriting Jobs from Home | Aaliya Book Publication">
+    <meta property="og:description" content="Earn ₹13,500–₹30,000 per month from home with professional handwriting projects. Govt. registered. Apply now.">
+    <meta property="og:image" content="https://i.ibb.co/60WJVcFG/IMG-20260115-WA0001.jpg">
+    <meta property="og:url" content="https://www.aaliyabookpublication.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Your existing custom CSS -->
     <style>
         body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         .glass-morphism { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
         .gradient-text { background: linear-gradient(90deg, #1e40af, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Smooth Scroll Container */
-        .scroll-container {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            gap: 20px;
-            padding: 20px;
-            cursor: grab;
-            scrollbar-width: none;
-        }
-        .scroll-container::-webkit-scrollbar { display: none; }
-        
-        .scrolling-wrapper {
-            display: flex;
-            animation: scroll 45s linear infinite;
-        }
-        .scrolling-wrapper:hover { animation-play-state: paused; }
-        
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
 
-        .feedback-card {
-            min-width: 320px;
-            background: #f8fafc;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            margin-right: 20px;
-            border: 1px solid #e2e8f0;
-        }
+        /* Smooth Scroll Container */
+        .scroll-container { display: flex; overflow-x: auto; white-space: nowrap; gap: 20px; padding: 20px; cursor: grab; scrollbar-width: none; }
+        .scroll-container::-webkit-scrollbar { display: none; }
+
+        .scrolling-wrapper { display: flex; animation: scroll 45s linear infinite; }
+        .scrolling-wrapper:hover { animation-play-state: paused; }
+
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .feedback-card { min-width: 320px; background: #f8fafc; padding: 25px; border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-right: 20px; border: 1px solid #e2e8f0; }
 
         /* FAQ Transition */
-        .faq-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-        }
-        .faq-item.active .faq-content {
-            max-height: 300px;
-            padding-bottom: 24px;
-        }
+        .faq-content { max-height: 0; overflow: hidden; transition: all 0.3s ease-in-out; }
+        .faq-item.active .faq-content { max-height: 300px; padding-bottom: 24px; }
         .faq-item.active { border-color: #3b82f6; background-color: #f0f7ff; }
         .faq-item.active i { transform: rotate(180deg); color: #1e40af; }
 
-        /* New Form Styles Integration */
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            color: #4b5a76;
-            margin-bottom: 6px;
-            text-align: left;
-        }
-        .form-input-custom {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid #dfe3ea;
-            border-radius: 14px;
-            outline: none;
-            font-size: 15px;
-            transition: 0.3s;
-            background: #f9fbff;
-        }
-        .form-input-custom:focus {
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-        }
-        .thankyou-section {
-            text-align: center;
-            padding: 40px 20px;
-            display: none;
-        }
+        /* Form Styles */
+        .form-group label { display: block; font-size: 13px; color: #4b5a76; margin-bottom: 6px; text-align: left; }
+        .form-input-custom { width: 100%; padding: 14px 16px; border: 1px solid #dfe3ea; border-radius: 14px; outline: none; font-size: 15px; transition: 0.3s; background: #f9fbff; }
+        .form-input-custom:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); }
+        .thankyou-section { text-align: center; padding: 40px 20px; display: none; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-normal">
