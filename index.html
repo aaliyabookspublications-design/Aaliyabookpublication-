@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Aliya Book Publication</title>
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
 <html>
 
 <head>
@@ -31,47 +20,40 @@
 
     <meta name="author"
           content="Aliya Book Publication">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" 
+href="https://fonts.gstatic.com" crossorigin>
+
+<link 
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+  
+<div id="fraudPopup" class="popup-overlay">
 
-  <div id="fraudPopup" class="popup-overlay">
+    <div class="popup-container">
 
-    <div class="popup-box">
-
-        <!-- Close Button -->
-        <button class="popup-close" id="closePopup">
-            ❌
-        </button>
-
-        <!-- Language Switch -->
-        <div class="language-switch">
-            <button id="englishBtn" class="lang-btn active">
-                English
-            </button>
-
-            <button id="hindiBtn" class="lang-btn">
-                हिन्दी
-            </button>
+        <span class="popup-close" onclick="closePopup()">❌</span>
+      
+        <div class="language-switcher">
+            <button id="englishBtn" class="active">English</button>
+            <button id="hindiBtn">हिन्दी</button>
         </div>
-
-        <!-- ENGLISH CONTENT -->
-        <div id="englishContent" class="popup-content">
+      
+        <div id="englishContent">
 
             <h2>⚠️ IMPORTANT FRAUD ALERT</h2>
 
             <p>
-                Aliya Book Publication does not have any official Instagram
-                or Facebook page/account.
+                Aliya Book Publication does not have any official Instagram or Facebook page/account.
             </p>
 
             <p>
-                If you receive any message on Instagram, Facebook, Telegram,
-                or any other platform asking for registration, payment,
-                or joining in the name of Aliya Book Publication,
-                please do not trust it.
-                Such accounts and messages may be fraudulent.
+                If you receive any registration, payment, or joining message in the name of Aliya Book Publication through Instagram, Facebook, Telegram, or any other platform, please do not trust it. Such accounts and messages may be fraudulent.
             </p>
 
             <p>
@@ -80,9 +62,7 @@
             </p>
 
             <p>
-                Please note: On our Telegram channel, we only share
-                work samples, updates, and customer reviews.
-                We never send personal registration messages through Telegram.
+                Please note: We only share work samples, updates, and customer reviews on our Telegram channel. We never send personal registration messages through Telegram.
             </p>
 
             <p>
@@ -91,8 +71,7 @@
             </p>
 
             <p>
-                Registration and official communication are done only
-                through this WhatsApp number.
+                Registration and official communication are conducted only through this WhatsApp number.
             </p>
 
             <p>
@@ -101,59 +80,42 @@
             </p>
 
             <p>
-                Verify the WhatsApp number mentioned on the official
-                website before trusting any link.
+                Please verify the WhatsApp number mentioned on the website before trusting any link.
             </p>
 
             <p>
-                ❌ Any payment or registration made through any other
-                WhatsApp number, Instagram page, Facebook page,
-                or website will be at your own responsibility.
+                ❌ Any payment or registration made through any other WhatsApp number, Instagram page, Facebook page, or website will be entirely at your own risk.
             </p>
 
             <p>
-                If you find any fake page, fake website, or fraudulent
-                message, immediately file a complaint on the Cyber Crime
-                Portal and report the related WhatsApp number,
-                bank account, and social media account.
+                If you find any fake page, fake website, or fraudulent message, immediately file a complaint on the Cyber Crime Portal and report the respective WhatsApp number, bank account, and social media account.
             </p>
 
             <p>
-                For genuine information and services, please visit our
-                official website.
+                For genuine information and services, please visit our official website.
             </p>
 
         </div>
-
-
-        <!-- HINDI CONTENT -->
-        <div id="hindiContent" class="popup-content" style="display:none;">
+      
+        <div id="hindiContent" style="display: none;">
 
             <h2>⚠️ महत्वपूर्ण धोखाधड़ी चेतावनी</h2>
 
             <p>
-                Aliya Book Publication का Instagram या Facebook पर
-                कोई आधिकारिक पेज/अकाउंट नहीं है।
+                Aliya Book Publication का Instagram या Facebook पर कोई आधिकारिक पेज/अकाउंट नहीं है।
             </p>
 
             <p>
-                यदि आपको Instagram, Facebook, Telegram या किसी अन्य
-                प्लेटफ़ॉर्म पर Aliya Book Publication के नाम से
-                रजिस्ट्रेशन, भुगतान या जॉइनिंग से संबंधित कोई संदेश मिले,
-                तो कृपया उस पर विश्वास न करें।
-                ऐसे अकाउंट और संदेश धोखाधड़ी हो सकते हैं।
+                यदि आपको Instagram, Facebook, Telegram या किसी अन्य माध्यम से Aliya Book Publication के नाम पर रजिस्ट्रेशन, भुगतान या जॉइनिंग का संदेश प्राप्त होता है, तो कृपया उस पर विश्वास न करें। ऐसे संदेश और अकाउंट धोखाधड़ी हो सकते हैं।
             </p>
 
             <p>
                 ✅ <strong>आधिकारिक Telegram चैनल:</strong><br>
-                t.me/aaliyabookspublication.s
+                t.me/aaliyabookspublications
             </p>
 
             <p>
-                कृपया ध्यान दें: Telegram चैनल पर हम केवल
-                वर्क सैंपल, अपडेट और ग्राहक समीक्षाएँ साझा करते हैं।
-                हम Telegram चैनल से किसी को व्यक्तिगत रजिस्ट्रेशन
-                संदेश नहीं भेजते।
+                कृपया ध्यान दें: Telegram चैनल पर केवल कार्य के नमूने, अपडेट और ग्राहक समीक्षा साझा की जाती हैं। Telegram के माध्यम से व्यक्तिगत रजिस्ट्रेशन संदेश नहीं भेजे जाते।
             </p>
 
             <p>
@@ -162,8 +124,7 @@
             </p>
 
             <p>
-                रजिस्ट्रेशन और आधिकारिक संवाद केवल इसी
-                WhatsApp नंबर के माध्यम से किया जाता है।
+                रजिस्ट्रेशन और आधिकारिक संवाद केवल इसी WhatsApp नंबर के माध्यम से किए जाते हैं।
             </p>
 
             <p>
@@ -172,49 +133,35 @@
             </p>
 
             <p>
-                किसी भी लिंक पर भरोसा करने से पहले वेबसाइट पर दिए गए
-                WhatsApp नंबर को अवश्य सत्यापित करें।
+                किसी भी लिंक पर विश्वास करने से पहले वेबसाइट पर दिए गए WhatsApp नंबर की पुष्टि अवश्य करें।
             </p>
 
             <p>
-                ❌ किसी अन्य WhatsApp नंबर, Instagram पेज,
-                Facebook पेज या वेबसाइट के माध्यम से किया गया
-                भुगतान या रजिस्ट्रेशन आपकी स्वयं की जिम्मेदारी होगी।
+                ❌ किसी अन्य WhatsApp नंबर, Instagram पेज, Facebook पेज या वेबसाइट के माध्यम से किया गया भुगतान या रजिस्ट्रेशन आपकी स्वयं की जिम्मेदारी होगी।
             </p>
 
             <p>
-                यदि आपको कोई फर्जी पेज, फर्जी वेबसाइट या धोखाधड़ी
-                संदेश मिले, तो तुरंत Cyber Crime Portal पर शिकायत करें
-                और संबंधित WhatsApp नंबर, बैंक खाते तथा
-                सोशल मीडिया अकाउंट की रिपोर्ट करें।
+                यदि आपको कोई फर्जी पेज, फर्जी वेबसाइट या धोखाधड़ी वाला संदेश मिले, तो तुरंत Cyber Crime Portal पर शिकायत दर्ज करें और संबंधित WhatsApp नंबर, बैंक खाते एवं सोशल मीडिया अकाउंट की रिपोर्ट करें।
             </p>
 
             <p>
-                सही जानकारी और सेवाओं के लिए केवल हमारी
-                आधिकारिक वेबसाइट पर जाएँ।
+                सही जानकारी और सेवाओं के लिए कृपया हमारी आधिकारिक वेबसाइट पर ही जाएं।
             </p>
-          
+
         </div>
-      
+
     </div>
-  
+
 </div>
-
-<!-- =========================
-HOME PAGE HTML START
-========================= -->
-
-<!-- HEADER START -->
+  
 <header class="header">
 
     <div class="container navbar">
 
-    <!-- Company Name -->
     <a href="#home" class="company-name">
         Aliya Book Publication
     </a>
 
-    <!-- Mobile Menu -->
     <button class="menu-toggle" id="menuToggle">
         ☰
     </button>
@@ -236,58 +183,55 @@ HOME PAGE HTML START
     </div>
 
 </header>
-<!-- HEADER END -->
+  
+  <section class="hero">
 
+    <img src="https://i.ibb.co/R4DcnpsV/maxresdefault.jpg"
+         alt="Handwriting Jobs From Home"
+         class="hero-image">
 
-<!-- HERO SECTION START -->
-<section class="hero-section" id="home">
+</section>
 
-    <div class="hero-overlay"></div>
+<section class="hero-text-section">
 
-    <div class="container hero-content">
+    <div class="hero-text-content">
 
-        <h1>
-            Work From Home Writing<br>
-            Job Opportunity
-        </h1>
+        <h1>Work From Home</h1>
 
-        <P class="hero-subtitle">
-            Earn ₹25000 per month by writing Nobel Book on
-            A4 size sheet page with your beautiful handwriting.
-        </P>
+        <h2>Writing Job Opportunity</h2>
+
+        <p>
+            Earn ₹25000 per month by writing Nobel Book on A4 size sheet page with your beautiful handwriting.
+        </p>
 
     </div>
 
 </section>
-<!-- HERO SECTION END -->
 
+<section class="benefits">
 
-<!-- BENEFITS & BUTTONS START -->
-<div class="home-extra">
+    <div class="benefits-container">
 
-    <!-- Benefits -->
-    <div class="benefits-wrapper">
-
-        <div class="benefit-card">
-            Flexible Working Hours
+        <div class="benefit-box">
+            <h3>Flexible Working Hours</h3>
         </div>
 
-        <div class="benefit-card">
-            50% Advance Salary
+        <div class="benefit-box">
+            <h3>50% Advance Salary</h3>
         </div>
 
-        <div class="benefit-card">
-            Beginner Friendly
+        <div class="benefit-box">
+            <h3>Beginner Friendly</h3>
         </div>
 
-        <div class="benefit-card">
-            Remote Work Opportunity
+        <div class="benefit-box">
+            <h3>Remote Work Opportunity</h3>
         </div>
 
     </div>
 
+</section>
 
-    <!-- Buttons -->
     <div class="hero-buttons">
 
         <a href="https://www.handwritingjob.space"
@@ -310,19 +254,17 @@ HOME PAGE HTML START
 
 </div>
 <!-- BENEFITS & BUTTONS END -->
+  
+  <!-- FLOATING WHATSAPP BUTTON -->
 
-
-<!-- FLOATING WHATSAPP BUTTON -->
 <a href="https://wa.me/918114418588"
-   target="_blank"
-   class="floating-whatsapp"
-   aria-label="WhatsApp">
+   class="whatsapp-float"
+   target="_blank">
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
          alt="WhatsApp">
 
 </a>
-
 
 <!-- PROJECTS SECTION START -->
 <!-- Apna Projects HTML yahan se shuru karo -->
@@ -338,8 +280,8 @@ Place this code below the Home Page section
 <section class="projects-section" id="projects">
 
     <div class="container">
-
-        <!-- Section Heading -->
+      
+      <!--Section Heading-->
         <div class="section-title">
             <h2>Writing Projects Plan</h2>
             <p>
@@ -2022,8 +1964,4 @@ PROJECTS SECTION END
 <!-- ==========================================
      FOOTER SECTION END
 =========================================== -->
-    <script  src="./script.js"></script>
 
-  </body>
-  
-</html>

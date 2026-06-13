@@ -1,753 +1,484 @@
-/* ==================================================
-   ALIYA BOOK PUBLICATION
-   CSS PART 1
-   Global Styles + Fraud Alert Popup
-================================================== */
+/* ==========================
+   FRAUD ALERT POPUP STYLES
+========================== */
 
-
-/* ======================
-   GOOGLE FONT
-====================== */
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-
-/* ======================
-   RESET CSS
-====================== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    overflow-y: auto;
+    animation: fadeIn 0.4s ease-in-out;
 }
 
-html{
-    scroll-behavior:smooth;
+.popup-overlay.show {
+    display: flex;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#F8F9FA;
-    color:#6C757D;
-    line-height:1.6;
-    overflow-x:hidden;
+.popup-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    animation: popupSlide 0.4s ease;
 }
 
-
-/* ======================
-   COLOR VARIABLES
-====================== */
-:root{
-
-    /* Website Background */
-    --bg-color:#F8F9FA;
-
-    /* Navbar/Footer */
-    --navy:#1E3A5F;
-
-    /* Main Heading */
-    --heading:#333333;
-
-    /* Normal Text */
-    --text:#6C757D;
-
-    /* Buttons */
-    --green:#28A745;
-    --green-hover:#218838;
-
-    /* Cards */
-    --white:#FFFFFF;
-
-    /* Border */
-    --border:#E5E7EB;
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 26px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-
-/* ======================
-   COMMON CONTAINER
-====================== */
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+.popup-close:hover {
+    transform: scale(1.1);
 }
 
-
-/* ======================
-   IMAGES
-====================== */
-img{
-    max-width:100%;
-    display:block;
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
-
-/* ======================
-   LINKS
-====================== */
-a{
-    text-decoration:none;
-    color:inherit;
+.language-switcher button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #E5E7EB;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-
-/* ======================
-   BUTTONS
-====================== */
-button{
-    border:none;
-    outline:none;
-    cursor:pointer;
-    font-family:'Poppins',sans-serif;
+.language-switcher button:hover {
+    background: #1E3A5F;
+    color: #FFFFFF;
 }
 
-
-/* ==================================================
-   FRAUD ALERT POPUP
-================================================== */
-
-.popup-overlay{
-
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.70);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:20px;
-
-    z-index:99999;
+.language-switcher button.active {
+    background: #1E3A5F;
+    color: #FFFFFF;
 }
 
-
-/* Popup Box */
-.popup-box{
-
-    background:var(--white);
-
-    width:100%;
-    max-width:800px;
-
-    max-height:90vh;
-
-    overflow-y:auto;
-
-    border-radius:15px;
-
-    padding:30px;
-
-    position:relative;
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,0.25);
+.popup-container h2 {
+    color: #D32F2F;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
 }
 
-
-/* ======================
-   CLOSE BUTTON
-====================== */
-.popup-close{
-
-    position:absolute;
-
-    top:15px;
-    right:15px;
-
-    width:40px;
-    height:40px;
-
-    border-radius:50%;
-
-    background:#000000;
-    color:#fff;
-
-    font-size:18px;
-    font-weight:700;
-
-    transition:0.3s ease;
+.popup-container p {
+    color: #333333;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
 }
 
-.popup-close:hover{
-
-    background:#ffffff;
-
-    transform:scale(1.08);
+.popup-container strong {
+    color: #1E3A5F;
 }
 
-
-/* ======================
-   LANGUAGE SWITCH
-====================== */
-.language-switch{
-
-    display:flex;
-    gap:12px;
-
-    margin-bottom:25px;
+/* Scrollbar Styling */
+.popup-container::-webkit-scrollbar {
+    width: 8px;
 }
 
-
-/* Language Buttons */
-.lang-btn{
-
-    padding:10px 22px;
-
-    border-radius:8px;
-
-    border:1px solid var(--border);
-
-    background:#f1f1f1;
-
-    color:var(--heading);
-
-    font-size:15px;
-    font-weight:700;
-
-    transition:0.3s ease;
+.popup-container::-webkit-scrollbar-track {
+    background: #F1F1F1;
+    border-radius: 10px;
 }
 
-
-/* Active Button */
-.lang-btn.active{
-
-    background:var(--navy);
-
-    color:#fff;
-
-    border-color:var(--navy);
+.popup-container::-webkit-scrollbar-thumb {
+    background: #1E3A5F;
+    border-radius: 10px;
 }
 
-
-/* Hover */
-.lang-btn:hover{
-
-    background:var(--navy);
-
-    color:#fff;
-}
-
-
-/* ======================
-   POPUP CONTENT
-====================== */
-.popup-content{
-
-    color:var(--text);
-
-    font-size:15px;
-
-    line-height:1.9;
-}
-
-
-/* Heading */
-.popup-content h2{
-
-    color:#dc3545;
-
-    font-size:28px;
-
-    margin-bottom:20px;
-
-    font-weight:800;
-}
-
-
-/* Paragraph */
-.popup-content p{
-
-    margin-bottom:18px;
-}
-
-
-/* Bold Text */
-.popup-content strong{
-
-    color:var(--heading);
-}
-
-
-/* ==================================================
-   SCROLLBAR DESIGN
-================================================== */
-
-.popup-box::-webkit-scrollbar{
-
-    width:8px;
-}
-
-.popup-box::-webkit-scrollbar-track{
-
-    background:#f1f1f1;
-
-    border-radius:20px;
-}
-
-.popup-box::-webkit-scrollbar-thumb{
-
-    background:var(--navy);
-
-    border-radius:20px;
-}
-
-.popup-box::-webkit-scrollbar-thumb:hover{
-
-    background:#152b46;
-}
-
-
-/* ==================================================
-   RESPONSIVE POPUP
-================================================== */
-
-@media(max-width:768px){
-
-    .popup-box{
-
-        padding:22px;
+/* Popup Animation */
+@keyframes popupSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
     }
 
-    .popup-content h2{
-
-        font-size:22px;
-    }
-
-    .popup-content{
-
-        font-size:14px;
-    }
-
-    .language-switch{
-
-        flex-wrap:wrap;
-    }
-
-    .lang-btn{
-
-        flex:1;
-        text-align:center;
-    }
-
-    .popup-close{
-
-        width:60px;
-        height:60px;
-
-        font-size:16px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-
-@media(max-width:480px){
-
-    .popup-overlay{
-
-        padding:12px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    .popup-box{
-
-        padding:18px;
-        border-radius:12px;
-    }
-
-    .popup-content h2{
-
-        font-size:20px;
-    }
-
-    .popup-content{
-
-        font-size:13px;
-        line-height:1.8;
-    }
-
-    .lang-btn{
-
-        width:100%;
+    to {
+        opacity: 1;
     }
 }
 
-/* ==================================================
-   CSS PART 1 END
-================================================== */
+/* ==========================
+   MOBILE RESPONSIVE DESIGN
+========================== */
 
-/* =========================
+@media (max-width: 768px) {
+
+    .popup-container {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .popup-container h2 {
+        font-size: 24px;
+    }
+
+    .popup-container p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .language-switcher {
+        flex-wrap: wrap;
+    }
+
+    .language-switcher button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .popup-close {
+        font-size: 24px;
+        top: 12px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .popup-container {
+        padding: 20px 15px;
+    }
+
+    .popup-container h2 {
+        font-size: 20px;
+    }
+
+    .popup-container p {
+        font-size: 13px;
+    }
+
+    .language-switcher button {
+        width: 100%;
+    }
+
+}
+ /* =========================
 HOME PAGE CSS START
 ========================= */
 
 /* RESET */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial,sans-serif;
-    overflow-x:hidden;
-    background:#ffffff;
+body {
+    font-family:'Poppins',sans-serif;
+    overflow-x: hidden;
+    background: #F8F9FA;
 }
-
 
 /* CONTAINER */
 
-.container{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
-
 
 /* =========================
 HEADER
 ========================= */
 
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#1f3d68;
-    z-index:999;
-    height:55px;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #1E3A5F;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    height:50px;
-    padding:0 20px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
 }
 
-.company-name{
-
-    text-decoration:none;
-
-    color:#ffffff;
-
-    font-family:'Playfair Display', serif;
-
-    font-size:18px;
-
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    text-shadow:0 2px 4px rgba(0,0,0,0.30);
+.company-name {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Playfair Display',
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.menu-toggle{
-    background:none;
-    border:none;
-    color:#ffffff;
-    font-size:30px;
-    cursor:pointer;
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 32px;
+    cursor: pointer;
 }
-
 
 /* =========================
 MOBILE MENU
 ========================= */
 
-.nav-menu{
-    position:fixed;
-    top:0;
-    right:-100%;
-    width:280px;
-    height:100vh;
-    background:#1f3d68;
-    padding-top:80px;
-    transition:0.4s;
+.nav-menu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: #1E3A5F;
+    transition: 0.4s ease;
+    z-index: 998;
 }
 
-.nav-menu.active{
-    right:0;
+.nav-menu.active {
+    right: 0;
 }
 
-.nav-menu ul{
-    list-style:none;
+.nav-menu ul {
+    list-style: none;
 }
 
-.nav-menu ul li{
-    border-bottom:1px solid rgba(255,255,255,0.15);
+.nav-menu ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
-.nav-menu ul li a{
-    display:block;
-    color:#ffffff;
-    text-decoration:none;
-    padding:18px 25px;
-    font-size:16px;
+.nav-menu ul li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 18px 25px;
+    font-size: 16px;
 }
 
-.nav-menu ul li a:hover{
-    background:rgba(255,255,255,0.10);
+.nav-menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.10);
 }
-
 
 /* =========================
-HERO SECTION
+HERO IMAGE SECTION
 ========================= */
 
-.hero-section{
-
-    min-height:520px;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
-    ),
-    url("https://i.ibb.co/gbx27qyV/IMG-20260613-091320.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:90px 20px 40px;
+.hero {
+    width: 100%;
+    margin-top: 70px;
+    background: #FFFFFF;
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.hero-content h1{
+/* =========================
+HERO TEXT SECTION
+========================= */
 
-    color:#ffffff;
-
-    font-size:34px;
-
-    font-weight:800;
-
-    line-height:1.2;
-
-    margin-bottom:20px;
+.hero-text-section {
+    background: #F8F9FA;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.hero-content h1{
-
-    color:#ffffff;
-
-    font-size:40px;
-
-    font-weight:800;
-
-    line-height:1.2;
-
-    margin-bottom:20px;
-
-    text-shadow:0 2px 6px rgba(0,0,0,0.40);
-  
+.hero-text-content {
+    max-width: 800px;
+    margin: auto;
 }
-.hero-subtitle{
 
-    color:#ffffff;
+.hero-text-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #333333;
+    margin-bottom: 15px;
+}
 
-    font-family:'Poppins', sans-serif;
+.hero-text-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 20px;
+}
 
-    font-size:19px;
-
-    font-weight:600;
-
-    line-height:1.8;
-
-    max-width:380px;
-
-    margin:0 auto 25px;
-
-    text-shadow:0 2px 4px rgba(0,0,0,0.35);
+.hero-text-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #6C757D;
 }
 
 /* =========================
 BENEFITS SECTION
 ========================= */
 
-.home-extra{
-    background:#ffffff;
-    padding:25px 20px 30px;
+.benefits {
+    padding: 40px 20px;
+    background: #F8F9FA;
 }
 
-.benefits-wrapper{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
-
-    margin-bottom:25px;
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    margin: auto;
 }
 
-.benefit-card{
-
-    background:#f3f4f6;
-
-    color:#333333;
-
-    padding:16px 10px;
-
-    border-radius:15px;
-
-    text-align:center;
-
-    font-size:14px;
-
-    font-weight:600;
+.benefit-box {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 15px;
+    padding: 18px 10px;
+    text-align: center;
 }
 
+.benefit-box h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.5;
+}
 
 /* =========================
 BUTTONS
 ========================= */
 
-.hero-buttons{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
+.hero-buttons {
+    text-align: center;
+    margin-top: 25px;
 }
 
 .apply-btn,
-.whatsapp-btn{
-
-    display:block;
-
-    width:100%;
-
-    padding:16px;
-
-    border-radius:12px;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    color:#ffffff;
-
-    font-size:17px;
-
-    font-weight:700;
+.whatsapp-btn {
+    display: inline-block;
+    width: 90%;
+    max-width: 320px;
+    padding: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 15px;
 }
 
-.apply-btn{
-    background:#F97316;
-    color:#ffffff;
+.apply-btn {
+    background: #F97316;
 }
 
-.whatsapp-btn{
-    background:#25D366;
+.apply-btn:hover {
+    background: #218838;
 }
 
+.whatsapp-btn {
+    background: #25D366;
+}
 
 /* =========================
 FLOATING WHATSAPP
 ========================= */
 
-.floating-whatsapp{
-
-    position:fixed;
-
-    right:20px;
-
-    bottom:20px;
-
-    z-index:999;
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
 }
 
-.floating-whatsapp img{
-
-    width:65px;
-
-    height:65px;
+.whatsapp-float img {
+    width: 60px;
+    height: 60px;
 }
-
 
 /* =========================
-ANDROID & IPHONE
+RESPONSIVE
 ========================= */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-    .hero-section{
-        min-height:500px;
+    .hero-text-content h1 {
+        font-size: 32px;
     }
 
-    .hero-content h1{
-        font-size:32px;
+    .hero-text-content h2 {
+        font-size: 22px;
     }
 
-    .hero-subtitle{
-        font-size:13px;
+    .hero-text-content p {
+        font-size: 16px;
     }
 
-    .benefits-wrapper{
-        gap:12px;
-    }
-
-    .benefit-card{
-        font-size:13px;
-        padding:14px 8px;
-    }
-
-    .apply-btn,
-    .whatsapp-btn{
-        font-size:16px;
-        padding:15px;
+    .benefit-box h3 {
+        font-size: 13px;
     }
 }
 
+@media (max-width: 480px) {
 
-/* =========================
-DESKTOP
-========================= */
-
-@media(min-width:769px){
-
-    .menu-toggle{
-        display:none;
+    .hero-text-content h1 {
+        font-size: 28px;
     }
 
-    .nav-menu{
-        position:static;
-        width:auto;
-        height:auto;
-        background:transparent;
-        padding-top:0;
+    .hero-text-content h2 {
+        font-size: 18px;
     }
 
-    .nav-menu ul{
-        display:flex;
-        gap:20px;
+    .hero-text-content p {
+        font-size: 15px;
     }
 
-    .nav-menu ul li{
-        border:none;
+    .benefits-container {
+        gap: 12px;
+    }
+
+    .benefit-box {
+        padding: 15px 8px;
+    }
+
+    .benefit-box h3 {
+        font-size: 12px;
     }
 }
 
@@ -882,7 +613,7 @@ HOME PAGE CSS END
    APPLY BUTTON
 ========================= */
 .project-btn{
-    display: inline-block;
+    display:block;
 
     width: 100%;
     text-align: center;
@@ -895,7 +626,7 @@ HOME PAGE CSS END
     border-radius: 10px;
 
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
 
     transition: all 0.3s ease;
 }
@@ -955,7 +686,7 @@ HOME PAGE CSS END
     }
 
     .project-btn{
-        font-size: 15px;
+        font-size: 18px;
         padding: 14px;
     }
 }
@@ -1192,7 +923,7 @@ HOME PAGE CSS END
     }
 
     .trust-section h2{
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .trust-icon{
@@ -1865,14 +1596,14 @@ HOME PAGE CSS END
 @media (max-width: 480px){
 
     .faq-section .section-title h2{
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .faq-section .section-title p{
         font-size: 15px;
     }
 
-    .faq-question{
+    .faq-question
         font-size: 14px;
         padding: 18px;
     }

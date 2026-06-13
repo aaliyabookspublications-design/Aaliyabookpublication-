@@ -1,63 +1,80 @@
-/* ==================================================
-   ALIYA BOOK PUBLICATION
-   script.js
-   Popup + Language Toggle + Mobile Navbar
-================================================== */
+/* ==========================
+   FRAUD ALERT POPUP SCRIPT
+========================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+// Website open hone ke 3 second baad popup open hoga
+window.addEventListener("load", function () {
 
-    /* ==========================================
-       FRAUD ALERT POPUP
-    ========================================== */
+    setTimeout(function () {
+
+        document.getElementById("fraudPopup").classList.add("show");
+
+    }, 3000);
+
+});
+
+
+/* ==========================
+   CLOSE POPUP
+========================== */
+
+function closePopup() {
+
+    document.getElementById("fraudPopup").classList.remove("show");
+
+}
+
+
+/* ==========================
+   LANGUAGE SWITCHER
+========================== */
+
+const englishBtn = document.getElementById("englishBtn");
+const hindiBtn = document.getElementById("hindiBtn");
+
+const englishContent = document.getElementById("englishContent");
+const hindiContent = document.getElementById("hindiContent");
+
+
+// English Button Click
+englishBtn.addEventListener("click", function () {
+
+    englishContent.style.display = "block";
+    hindiContent.style.display = "none";
+
+    englishBtn.classList.add("active");
+    hindiBtn.classList.remove("active");
+
+});
+
+
+// Hindi Button Click
+hindiBtn.addEventListener("click", function () {
+
+    englishContent.style.display = "none";
+    hindiContent.style.display = "block";
+
+    hindiBtn.classList.add("active");
+    englishBtn.classList.remove("active");
+
+});
+
+
+/* ==========================
+   CLOSE POPUP ON OUTSIDE CLICK
+========================== */
+
+window.addEventListener("click", function (event) {
 
     const popup = document.getElementById("fraudPopup");
-    const closePopup = document.getElementById("closePopup");
 
-    // Close Popup
-    if (closePopup && popup) {
-        closePopup.addEventListener("click", function () {
-            popup.style.display = "none";
-        });
+    if (event.target === popup) {
+
+        popup.classList.remove("show");
+
     }
 
-
-    /* ==========================================
-       LANGUAGE TOGGLE
-    ========================================== */
-
-    const englishBtn = document.getElementById("englishBtn");
-    const hindiBtn = document.getElementById("hindiBtn");
-
-    const englishContent = document.getElementById("englishContent");
-    const hindiContent = document.getElementById("hindiContent");
-
-    // English
-    if (englishBtn) {
-        englishBtn.addEventListener("click", function () {
-
-            englishContent.style.display = "block";
-            hindiContent.style.display = "none";
-
-            englishBtn.classList.add("active");
-            hindiBtn.classList.remove("active");
-
-        });
-    }
-
-    // Hindi
-    if (hindiBtn) {
-        hindiBtn.addEventListener("click", function () {
-
-            englishContent.style.display = "none";
-            hindiContent.style.display = "block";
-
-            hindiBtn.classList.add("active");
-            englishBtn.classList.remove("active");
-
-        });
-    }
-
-
+});
     /* ==========================================
        MOBILE NAVIGATION MENU
     ========================================== */
@@ -108,25 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* ==========================================
-       CLOSE MENU ON WINDOW RESIZE
-    ========================================== */
-
-    window.addEventListener("resize", function () {
-
-        if (window.innerWidth > 768) {
-
-            navMenu.classList.remove("active");
-
-            if (menuToggle) {
-                menuToggle.innerHTML = "☰";
-            }
-
-        }
-
-    });
-
-});
 /* ==========================================
    PROJECTS SECTION JAVASCRIPT
 ========================================== */
