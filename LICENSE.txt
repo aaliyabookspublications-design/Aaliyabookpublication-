@@ -1,6 +1,6 @@
-MIT License
+The MIT License (MIT)
 
-Copyright (c) 2026 aaliyabookspublications-design
+Copyright (c) 2026 Aaliya Book Publication (https://codepen.io/Aaliya-Book-Publication/pen/YPNWgwX)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

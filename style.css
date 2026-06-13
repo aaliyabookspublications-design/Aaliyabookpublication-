@@ -1,0 +1,2641 @@
+/* ==================================================
+   ALIYA BOOK PUBLICATION
+   CSS PART 1
+   Global Styles + Fraud Alert Popup
+================================================== */
+
+
+/* ======================
+   GOOGLE FONT
+====================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ======================
+   RESET CSS
+====================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8F9FA;
+    color:#6C757D;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+
+/* ======================
+   COLOR VARIABLES
+====================== */
+:root{
+
+    /* Website Background */
+    --bg-color:#F8F9FA;
+
+    /* Navbar/Footer */
+    --navy:#1E3A5F;
+
+    /* Main Heading */
+    --heading:#333333;
+
+    /* Normal Text */
+    --text:#6C757D;
+
+    /* Buttons */
+    --green:#28A745;
+    --green-hover:#218838;
+
+    /* Cards */
+    --white:#FFFFFF;
+
+    /* Border */
+    --border:#E5E7EB;
+}
+
+
+/* ======================
+   COMMON CONTAINER
+====================== */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* ======================
+   IMAGES
+====================== */
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/* ======================
+   LINKS
+====================== */
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* ======================
+   BUTTONS
+====================== */
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* ==================================================
+   FRAUD ALERT POPUP
+================================================== */
+
+.popup-overlay{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.70);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:99999;
+}
+
+
+/* Popup Box */
+.popup-box{
+
+    background:var(--white);
+
+    width:100%;
+    max-width:800px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    position:relative;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+/* ======================
+   CLOSE BUTTON
+====================== */
+.popup-close{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:#000000;
+    color:#fff;
+
+    font-size:18px;
+    font-weight:700;
+
+    transition:0.3s ease;
+}
+
+.popup-close:hover{
+
+    background:#ffffff;
+
+    transform:scale(1.08);
+}
+
+
+/* ======================
+   LANGUAGE SWITCH
+====================== */
+.language-switch{
+
+    display:flex;
+    gap:12px;
+
+    margin-bottom:25px;
+}
+
+
+/* Language Buttons */
+.lang-btn{
+
+    padding:10px 22px;
+
+    border-radius:8px;
+
+    border:1px solid var(--border);
+
+    background:#f1f1f1;
+
+    color:var(--heading);
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+
+/* Active Button */
+.lang-btn.active{
+
+    background:var(--navy);
+
+    color:#fff;
+
+    border-color:var(--navy);
+}
+
+
+/* Hover */
+.lang-btn:hover{
+
+    background:var(--navy);
+
+    color:#fff;
+}
+
+
+/* ======================
+   POPUP CONTENT
+====================== */
+.popup-content{
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+
+/* Heading */
+.popup-content h2{
+
+    color:#dc3545;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+}
+
+
+/* Paragraph */
+.popup-content p{
+
+    margin-bottom:18px;
+}
+
+
+/* Bold Text */
+.popup-content strong{
+
+    color:var(--heading);
+}
+
+
+/* ==================================================
+   SCROLLBAR DESIGN
+================================================== */
+
+.popup-box::-webkit-scrollbar{
+
+    width:8px;
+}
+
+.popup-box::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+    border-radius:20px;
+}
+
+.popup-box::-webkit-scrollbar-thumb{
+
+    background:var(--navy);
+
+    border-radius:20px;
+}
+
+.popup-box::-webkit-scrollbar-thumb:hover{
+
+    background:#152b46;
+}
+
+
+/* ==================================================
+   RESPONSIVE POPUP
+================================================== */
+
+@media(max-width:768px){
+
+    .popup-box{
+
+        padding:22px;
+    }
+
+    .popup-content h2{
+
+        font-size:22px;
+    }
+
+    .popup-content{
+
+        font-size:14px;
+    }
+
+    .language-switch{
+
+        flex-wrap:wrap;
+    }
+
+    .lang-btn{
+
+        flex:1;
+        text-align:center;
+    }
+
+    .popup-close{
+
+        width:60px;
+        height:60px;
+
+        font-size:16px;
+    }
+}
+
+
+@media(max-width:480px){
+
+    .popup-overlay{
+
+        padding:12px;
+    }
+
+    .popup-box{
+
+        padding:18px;
+        border-radius:12px;
+    }
+
+    .popup-content h2{
+
+        font-size:20px;
+    }
+
+    .popup-content{
+
+        font-size:13px;
+        line-height:1.8;
+    }
+
+    .lang-btn{
+
+        width:100%;
+    }
+}
+
+/* ==================================================
+   CSS PART 1 END
+================================================== */
+
+/* =========================
+HOME PAGE CSS START
+========================= */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    overflow-x:hidden;
+    background:#ffffff;
+}
+
+
+/* CONTAINER */
+
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#1f3d68;
+    z-index:999;
+    height:55px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:50px;
+    padding:0 20px;
+}
+
+.company-name{
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-family:'Playfair Display', serif;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-shadow:0 2px 4px rgba(0,0,0,0.30);
+}
+
+.menu-toggle{
+    background:none;
+    border:none;
+    color:#ffffff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+
+/* =========================
+MOBILE MENU
+========================= */
+
+.nav-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:280px;
+    height:100vh;
+    background:#1f3d68;
+    padding-top:80px;
+    transition:0.4s;
+}
+
+.nav-menu.active{
+    right:0;
+}
+
+.nav-menu ul{
+    list-style:none;
+}
+
+.nav-menu ul li{
+    border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.nav-menu ul li a{
+    display:block;
+    color:#ffffff;
+    text-decoration:none;
+    padding:18px 25px;
+    font-size:16px;
+}
+
+.nav-menu ul li a:hover{
+    background:rgba(255,255,255,0.10);
+}
+
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero-section{
+
+    min-height:520px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("https://i.ibb.co/gbx27qyV/IMG-20260613-091320.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:90px 20px 40px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content h1{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+
+    color:#ffffff;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+    text-shadow:0 2px 6px rgba(0,0,0,0.40);
+  
+}
+.hero-subtitle{
+
+    color:#ffffff;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:19px;
+
+    font-weight:500;
+
+    line-height:1.8;
+
+    max-width:380px;
+
+    margin:0 auto 25px;
+
+    text-shadow:0 2px 4px rgba(0,0,0,0.35);
+}
+
+/* =========================
+BENEFITS SECTION
+========================= */
+
+.home-extra{
+    background:#ffffff;
+    padding:25px 20px 30px;
+}
+
+.benefits-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.benefit-card{
+
+    background:#f3f4f6;
+
+    color:#333333;
+
+    padding:16px 10px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+
+/* =========================
+BUTTONS
+========================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.apply-btn,
+.whatsapp-btn{
+
+    display:block;
+
+    width:100%;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:700;
+}
+
+.apply-btn{
+    background:#F97316;
+    color:#ffffff;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+}
+
+
+/* =========================
+FLOATING WHATSAPP
+========================= */
+
+.floating-whatsapp{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    z-index:999;
+}
+
+.floating-whatsapp img{
+
+    width:65px;
+
+    height:65px;
+}
+
+
+/* =========================
+ANDROID & IPHONE
+========================= */
+
+@media(max-width:768px){
+
+    .hero-section{
+        min-height:500px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-subtitle{
+        font-size:13px;
+    }
+
+    .benefits-wrapper{
+        gap:12px;
+    }
+
+    .benefit-card{
+        font-size:13px;
+        padding:14px 8px;
+    }
+
+    .apply-btn,
+    .whatsapp-btn{
+        font-size:16px;
+        padding:15px;
+    }
+}
+
+
+/* =========================
+DESKTOP
+========================= */
+
+@media(min-width:769px){
+
+    .menu-toggle{
+        display:none;
+    }
+
+    .nav-menu{
+        position:static;
+        width:auto;
+        height:auto;
+        background:transparent;
+        padding-top:0;
+    }
+
+    .nav-menu ul{
+        display:flex;
+        gap:20px;
+    }
+
+    .nav-menu ul li{
+        border:none;
+    }
+}
+
+/* =========================
+HOME PAGE CSS END
+========================= */
+/* ==================================================
+   PROJECTS SECTION CSS
+   Aliya Book Publication
+================================================== */
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+.projects-section{
+    padding: 80px 0;
+    background: #F8F9FA;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.section-title p{
+    max-width: 700px;
+    margin: auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PROJECTS GRID
+========================= */
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+.project-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 35px 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+/* =========================
+   FEATURED CARD
+========================= */
+.featured-plan{
+    border: 2px solid #28A745;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+.project-badge{
+    display: inline-block;
+
+    background: #1E3A5F;
+    color: #FFFFFF;
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SALARY
+========================= */
+.project-card h3{
+    font-size: 34px;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   LIST
+========================= */
+.project-card ul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.project-card ul li{
+    padding: 12px 0;
+    border-bottom: 1px solid #E5E7EB;
+
+    color: #6C757D;
+    font-size: 16px;
+}
+
+
+/* =========================
+   APPLY BUTTON
+========================= */
+.project-btn{
+    display: inline-block;
+
+    width: 100%;
+    text-align: center;
+
+    padding: 15px;
+
+    background: #28A745;
+    color: #FFFFFF;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover{
+    background: #218838;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px){
+
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2{
+        font-size: 32px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 576px){
+
+    .projects-section{
+        padding: 60px 0;
+    }
+
+    .section-title{
+        margin-bottom: 35px;
+    }
+
+    .section-title h2{
+        font-size: 28px;
+    }
+
+    .section-title p{
+        font-size: 15px;
+    }
+
+    .project-card{
+        padding: 25px 20px;
+    }
+
+    .project-card h3{
+        font-size: 28px;
+    }
+
+    .project-card ul li{
+        font-size: 15px;
+    }
+
+    .project-btn{
+        font-size: 15px;
+        padding: 14px;
+    }
+}
+
+/* ==================================================
+   PROJECTS SECTION CSS END
+================================================== */
+/* Scroll Animation */
+.hide-card{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.show-card{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply Button Click Effect */
+.project-btn.clicked{
+    transform: scale(0.96);
+}
+/* ==========================================
+   HOW IT WORKS SECTION CSS
+========================================== */
+
+.how-it-works-section{
+    padding: 80px 0;
+    background: #F8F9FA;
+}
+
+/* Section Heading */
+.how-it-works-section .section-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.how-it-works-section .section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.how-it-works-section .section-title p{
+    max-width: 700px;
+    margin: 0 auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   STEPS GRID
+========================================== */
+
+.steps-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+
+/* Step Card */
+.step-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.step-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* Step Number */
+.step-number{
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+
+    background: #1E3A5F;
+    color: #FFFFFF;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* Step Heading */
+.step-card h3{
+    color: #333333;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* Step Text */
+.step-card p{
+    color: #6C757D;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   TRUST SECTION
+========================================== */
+
+.trust-section{
+    text-align: center;
+}
+
+.trust-section h2{
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 45px;
+}
+
+
+/* Trust Grid */
+.trust-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+
+/* Trust Card */
+.trust-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 35px 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.trust-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* Trust Icon */
+.trust-icon{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
+/* Trust Heading */
+.trust-card h3{
+    color: #333333;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* Trust Text */
+.trust-card p{
+    color: #6C757D;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 768px){
+
+    .how-it-works-section{
+        padding: 60px 0;
+    }
+
+    .how-it-works-section .section-title h2{
+        font-size: 32px;
+    }
+
+    .trust-section h2{
+        font-size: 30px;
+    }
+
+    .steps-grid{
+        margin-bottom: 60px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 480px){
+
+    .how-it-works-section .section-title h2{
+        font-size: 28px;
+    }
+
+    .how-it-works-section .section-title p{
+        font-size: 15px;
+    }
+
+    .step-card,
+    .trust-card{
+        padding: 28px 20px;
+    }
+
+    .step-number{
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .step-card h3,
+    .trust-card h3{
+        font-size: 20px;
+    }
+
+    .trust-section h2{
+        font-size: 26px;
+    }
+
+    .trust-icon{
+        font-size: 42px;
+    }
+}
+
+/* ==========================================
+   HOW IT WORKS CSS END
+========================================== */
+/* ==========================================
+   SCROLL ANIMATION
+========================================== */
+
+.hidden-animation{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.show-animation{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+/* ==========================================
+   ABOUT US SECTION CSS
+========================================== */
+
+.about-section{
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.about-section .section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-section .section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.about-section .section-title p{
+    max-width: 750px;
+    margin: 0 auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   ABOUT CONTENT
+========================================== */
+
+.about-wrapper{
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.about-content{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.about-content p{
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.about-content p:last-child{
+    margin-bottom: 0;
+}
+
+.about-content strong{
+    color: #333333;
+}
+
+
+/* ==========================================
+   MISSION & VISION
+========================================== */
+
+.mission-vision-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.mission-card,
+.vision-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* ==========================================
+   ICONS
+========================================== */
+
+.about-icon{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.mission-card h3,
+.vision-card h3{
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mission-card p,
+.vision-card p{
+    color: #6C757D;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   STATS SECTION
+========================================== */
+
+.stats-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.stat-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* ==========================================
+   STATS ICON
+========================================== */
+
+.stat-icon{
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.stat-card h3{
+    color: #333333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.stat-card p{
+    color: #6C757D;
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 768px){
+
+    .about-section{
+        padding: 60px 0;
+    }
+
+    .about-section .section-title h2{
+        font-size: 32px;
+    }
+
+    .mission-vision-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .about-content{
+        padding: 30px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 480px){
+
+    .about-section .section-title h2{
+        font-size: 28px;
+    }
+
+    .about-section .section-title p{
+        font-size: 15px;
+    }
+
+    .about-content{
+        padding: 25px 20px;
+    }
+
+    .about-content p{
+        font-size: 15px;
+    }
+
+    .mission-card,
+    .vision-card,
+    .stat-card{
+        padding: 28px 20px;
+    }
+
+    .about-icon{
+        font-size: 42px;
+    }
+
+    .stat-icon{
+        font-size: 40px;
+    }
+
+    .mission-card h3,
+    .vision-card h3{
+        font-size: 22px;
+    }
+
+    .stat-card h3{
+        font-size: 24px;
+    }
+}
+
+/* ==========================================
+   ABOUT US CSS END
+========================================== */
+/* ==========================================
+   ABOUT US ANIMATION
+========================================== */
+
+.about-hidden{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.about-show{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+/* ==========================================
+   REVIEWS SECTION CSS
+========================================== */
+
+.reviews-section{
+    padding: 80px 0;
+    background: #F8F9FA;
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.reviews-section .section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reviews-section .section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.reviews-section .section-title p{
+    max-width: 700px;
+    margin: 0 auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   REVIEWS GRID
+========================================== */
+
+.reviews-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* ==========================================
+   REVIEW CARD
+========================================== */
+
+.review-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    transition: all 0.3s ease;
+}
+
+.review-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* ==========================================
+   REVIEW HEADER
+========================================== */
+
+.review-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/* Avatar */
+.review-avatar{
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #1E3A5F;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-right: 15px;
+}
+
+
+/* Name */
+.review-header h3{
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+/* City */
+.review-header span{
+    color: #6C757D;
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   STARS
+========================================== */
+
+.review-stars{
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   REVIEW TEXT
+========================================== */
+
+.review-card p{
+    color: #6C757D;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 992px){
+
+    .reviews-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-section .section-title h2{
+        font-size: 32px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 576px){
+
+    .reviews-section{
+        padding: 60px 0;
+    }
+
+    .reviews-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-section .section-title{
+        margin-bottom: 35px;
+    }
+
+    .reviews-section .section-title h2{
+        font-size: 28px;
+    }
+
+    .reviews-section .section-title p{
+        font-size: 15px;
+    }
+
+    .review-card{
+        padding: 25px 20px;
+    }
+
+    .review-avatar{
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .review-header h3{
+        font-size: 17px;
+    }
+
+    .review-card p{
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================
+   REVIEW SCROLL ANIMATION
+========================================== */
+
+.review-hidden{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.review-show{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+
+/* ==========================================
+   REVIEWS CSS END
+========================================== */
+/* ==========================================
+   FAQ SECTION CSS
+========================================== */
+
+.faq-section{
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.faq-section .section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-section .section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.faq-section .section-title p{
+    max-width: 700px;
+    margin: 0 auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   FAQ CONTAINER
+========================================== */
+
+.faq-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   FAQ ITEM
+========================================== */
+
+.faq-item{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover{
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+
+/* ==========================================
+   QUESTION BUTTON
+========================================== */
+
+.faq-question{
+    width: 100%;
+    padding: 22px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;
+    border: none;
+
+    text-align: left;
+
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   PLUS / MINUS ICON
+========================================== */
+
+.faq-icon{
+    font-size: 28px;
+    font-weight: 400;
+    color: #1E3A5F;
+    transition: 0.3s ease;
+    margin-left: 20px;
+}
+
+
+/* ==========================================
+   ANSWER
+========================================== */
+
+.faq-answer{
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+        max-height 0.4s ease,
+        padding 0.4s ease;
+
+    padding: 0 25px;
+
+    color: #6C757D;
+}
+
+.faq-answer p{
+    line-height: 1.8;
+    padding-bottom: 20px;
+}
+
+
+/* ==========================================
+   ACTIVE STATE
+========================================== */
+
+.faq-item.active .faq-answer{
+    max-height: 300px;
+    padding: 0 25px;
+}
+
+.faq-item.active .faq-icon{
+    transform: rotate(180deg);
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 768px){
+
+    .faq-section{
+        padding: 60px 0;
+    }
+
+    .faq-section .section-title h2{
+        font-size: 32px;
+    }
+
+    .faq-question{
+        font-size: 15px;
+        padding: 20px;
+    }
+
+    .faq-answer{
+        padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer{
+        padding: 0 20px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 480px){
+
+    .faq-section .section-title h2{
+        font-size: 28px;
+    }
+
+    .faq-section .section-title p{
+        font-size: 15px;
+    }
+
+    .faq-question{
+        font-size: 14px;
+        padding: 18px;
+    }
+
+    .faq-icon{
+        font-size: 24px;
+    }
+
+    .faq-answer{
+        padding: 0 18px;
+    }
+
+    .faq-item.active .faq-answer{
+        padding: 0 18px;
+    }
+
+    .faq-answer p{
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   FAQ CSS END
+========================================== */
+/* ==========================================
+   CONTACT US SECTION CSS
+========================================== */
+
+.contact-section{
+    padding: 80px 0;
+    background: #F8F9FA;
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.contact-section .section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-section .section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.contact-section .section-title p{
+    max-width: 700px;
+    margin: 0 auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   CONTACT GRID
+========================================== */
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* ==========================================
+   CONTACT CARD
+========================================== */
+
+.contact-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.contact-icon{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.contact-card h3{
+    color: #333333;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.contact-card p{
+    color: #6C757D;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+
+    word-break: break-word;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.contact-btn{
+    display: inline-block;
+
+    background: #28A745;
+    color: #FFFFFF;
+
+    padding: 12px 24px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover{
+    background: #7DD3FC;
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 992px){
+
+    .contact-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-section .section-title h2{
+        font-size: 32px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 576px){
+
+    .contact-section{
+        padding: 60px 0;
+    }
+
+    .contact-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section .section-title{
+        margin-bottom: 35px;
+    }
+
+    .contact-section .section-title h2{
+        font-size: 28px;
+    }
+
+    .contact-section .section-title p{
+        font-size: 15px;
+    }
+
+    .contact-card{
+        padding: 30px 20px;
+    }
+
+    .contact-icon{
+        font-size: 42px;
+    }
+
+    .contact-card h3{
+        font-size: 20px;
+    }
+
+    .contact-card p{
+        font-size: 14px;
+    }
+
+    .contact-btn{
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+
+/* ==========================================
+   CONTACT ANIMATION CLASSES
+========================================== */
+
+.contact-hidden{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.contact-show{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+
+/* ==========================================
+   CONTACT US CSS END
+========================================== */
+/* Contact Button Click Effect */
+.contact-clicked{
+    transform: scale(0.96);
+}
+/* ==========================================
+   PRIVACY POLICY SECTION CSS
+========================================== */
+
+.privacy-section{
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.privacy-section .section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.privacy-section .section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.privacy-section .section-title p{
+    max-width: 760px;
+    margin: 0 auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   PRIVACY WRAPPER
+========================================== */
+
+.privacy-wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   PRIVACY CARD
+========================================== */
+
+.privacy-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    transition: all 0.3s ease;
+}
+
+.privacy-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+.privacy-card h3{
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.privacy-card p,
+.privacy-card li{
+    color: #6C757D;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.privacy-card p{
+    margin-bottom: 15px;
+}
+
+.privacy-card p:last-child{
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   LIST
+========================================== */
+
+.privacy-card ul{
+    padding-left: 20px;
+}
+
+.privacy-card li{
+    margin-bottom: 12px;
+}
+
+.privacy-card li:last-child{
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   STRONG TEXT
+========================================== */
+
+.privacy-card strong{
+    color: #333333;
+    word-break: break-word;
+}
+
+
+/* ==========================================
+   ANIMATION CLASSES
+========================================== */
+
+.privacy-hidden{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.privacy-show{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 768px){
+
+    .privacy-section{
+        padding: 60px 0;
+    }
+
+    .privacy-section .section-title h2{
+        font-size: 32px;
+    }
+
+    .privacy-card{
+        padding: 25px;
+    }
+
+    .privacy-card h3{
+        font-size: 22px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 576px){
+
+    .privacy-section .section-title{
+        margin-bottom: 35px;
+    }
+
+    .privacy-section .section-title h2{
+        font-size: 28px;
+    }
+
+    .privacy-section .section-title p{
+        font-size: 15px;
+    }
+
+    .privacy-card{
+        padding: 22px 18px;
+    }
+
+    .privacy-card h3{
+        font-size: 20px;
+    }
+
+    .privacy-card p,
+    .privacy-card li{
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   PRIVACY POLICY CSS END
+========================================== */
+/* ==========================================
+   TERMS & CONDITIONS SECTION CSS
+========================================== */
+
+.terms-section{
+    padding: 80px 0;
+    background: #F8F9FA;
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.terms-section .section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.terms-section .section-title h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.terms-section .section-title p{
+    max-width: 760px;
+    margin: 0 auto;
+    color: #6C757D;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   TERMS WRAPPER
+========================================== */
+
+.terms-wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   TERMS CARD
+========================================== */
+
+.terms-card{
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    transition: all 0.3s ease;
+}
+
+.terms-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+.terms-card h3{
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.terms-card p{
+    color: #6C757D;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.terms-card p:last-child{
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   ANIMATION CLASSES
+========================================== */
+
+.terms-hidden{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.terms-show{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 768px){
+
+    .terms-section{
+        padding: 60px 0;
+    }
+
+    .terms-section .section-title h2{
+        font-size: 32px;
+    }
+
+    .terms-card{
+        padding: 25px;
+    }
+
+    .terms-card h3{
+        font-size: 22px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 576px){
+
+    .terms-section .section-title{
+        margin-bottom: 35px;
+    }
+
+    .terms-section .section-title h2{
+        font-size: 28px;
+    }
+
+    .terms-section .section-title p{
+        font-size: 15px;
+    }
+
+    .terms-card{
+        padding: 22px 18px;
+    }
+
+    .terms-card h3{
+        font-size: 20px;
+    }
+
+    .terms-card p{
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   TERMS & CONDITIONS CSS END
+========================================== */
+/* ==========================================
+   FOOTER SECTION CSS (UPDATED)
+========================================== */
+
+.footer{
+    background: #1E3A5F;
+    color: #FFFFFF;
+    padding: 70px 0 25px;
+}
+
+/* Footer Grid */
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 45px;
+    text-align: left;
+}
+
+/* Round Small Logo */
+.footer-logo{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.20);
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Footer Text */
+.footer-column p{
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* Footer Headings */
+.footer-column h3{
+    color: #FFFFFF;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+/* Footer Lists */
+.footer-column ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li{
+    margin-bottom: 14px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Footer Links */
+.footer-column ul li a{
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover{
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+/* Footer Bottom */
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Footer Animation */
+.footer-hidden{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.footer-show{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 992px){
+
+    .footer-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+        text-align: left;
+    }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 576px){
+
+    .footer{
+        padding: 55px 0 20px;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .footer-logo{
+        width: 60px;
+        height: 60px;
+        margin: 0 0 20px;
+    }
+
+    .footer-column h3{
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .footer-column p,
+    .footer-column ul li{
+        font-size: 14px;
+    }
+
+    .footer-column ul li a:hover{
+        padding-left: 4px;
+    }
+
+    .footer-bottom p{
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+/* ==========================================
+   FOOTER CSS END
+========================================== */
